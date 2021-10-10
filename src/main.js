@@ -6,8 +6,11 @@ import router from './router'
 import MyHttpServer from '@/plugins/http.js'
 
 import ElementUI from 'element-ui'
+import { MessageBox } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/reset.css'
+import '@/assets/fonts/iconfont.css'
+
 
 
 
@@ -16,6 +19,7 @@ Vue.use(ElementUI)
 Vue.use(MyHttpServer)
 
 Vue.config.productionTip = false
+Vue.prototype.$confirm = MessageBox.confirm
 
 /* eslint-disable no-new */
 new Vue({
